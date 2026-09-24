@@ -1,9 +1,17 @@
 public class reverse {
     public static void main(String[] args) {
-        int rev=0;
-        for (int n=10890;n>0;n=n/10){
-            rev=(10*rev)+n%10;
+        int[] nums={1,2,3,4,5};
+        int leff=0;
+        int right=nums.length-1;
+        while(leff<right){
+            int temp=nums[leff];
+            nums[leff]=nums[right];
+            nums[right]=temp;
+            leff++;
+            right--;
         }
-        System.out.println("Reversed number: " + rev);  
+        for(int i=0;i<nums.length;i++){
+            System.out.print(nums[i]);
+        }
     }
 }
